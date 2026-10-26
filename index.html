@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Custom YouTube Clone</title>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .video-card {
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-info {
+            padding: 12px;
+        }
+        .video-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+            color: #f1f1f1;
+        }
+        .video-desc {
+            font-size: 14px;
+            color: #aaa;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>📺 My Video Stream</header>
+
+    <div class="video-grid">
+        <!-- Video Card 1 -->
+        <div class="video-card">
+            <div class="video-container">
+                <!-- REPLACE THE URL IN SRC WITH YOUR EMBED CODE -->
+                <iframe src="https://youtube.com" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p class="video-title">Epic Video Title 1</p>
+                <p class="video-desc">Custom description goes here.</p>
+            </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="video-card">
+            <div class="video-container">
+                <iframe src="https://youtube.com" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p class="video-title">Epic Video Title 2</p>
+                <p class="video-desc">Another description goes here.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
